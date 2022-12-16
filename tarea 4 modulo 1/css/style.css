@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+body{
+    display: flex;
+}
+
+h1{
+    font-size: 45px;
+}
+
+h3{
+    color: #062446;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h4, b, li{
+    color: #062446;
+}
+h4, b{
+    font-size: 20px;
+}
+.contenedor-izq{
+    width: 30%;
+    color: #fff;
+    background: #062446;
+    height: 112vh;
+    text-align: center;
+}
+
+.sobreMi p {
+    text-align: center;
+    padding: 18px;
+    font-size: 25px;
+}
+
+img{
+    border-radius: 150px;
+}
+
+#contacto{
+    text-align: start;
+    margin-left: 25px;
+    margin-top: 150px;
+}
+#contacto span{
+    font-size: 25px;
+}
+
+section{
+    margin-bottom: 30px;
+}
+
+.contenedor-der{
+    text-align: center;
+    list-style-position: inside;
+    margin: auto;
+}
+.listaEstudios li{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
