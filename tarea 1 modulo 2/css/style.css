@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
 body{
     display: flex;
-    
+    background: linear-gradient(182deg,#fef6f6 0%, #b0b4b4 73%);
 }
 
 h1{
@@ -37,7 +38,9 @@ h4, b{
 }
 
 img{
-    border-radius: 150px;
+    border-radius: 200px 200px 200px 200px;
+    box-shadow: 22px 0px 5px 0px rgb(215 189 189 / 75%);
+    border: 5px solid #ff6550;
 }
 
 #contacto{
@@ -62,5 +65,10 @@ section{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+}
+.listadoSkills{
+    column-count: 4;
+    column-gap: 15px;
+    column-rule: 2px solid #000000;
 }
 
