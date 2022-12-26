@@ -1,0 +1,46 @@
+.ejer1, .ejer2{
+    width: 600px;
+    height: 600px;
+    border: 4px solid black;
+}
+
+.ejer1{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.ejer2{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.ejer3{
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid black;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rojo1, .rojo2, .rojo3{
+    color:white;
+    background-color: red;
+}
+
+.azul1, .azul2, .azul3{
+    color:white;
+    text-align: center;
+    background-color: blue;
+}
+.verde1, .verde2, .verde3{
+    color:white;
+    text-align: center;
+    background-color: green;
+}
