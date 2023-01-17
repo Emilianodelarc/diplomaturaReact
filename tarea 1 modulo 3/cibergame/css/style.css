@@ -115,7 +115,7 @@ p {
 /* HOME */
 
 .main-banner {
-  background-image: url(../img/banner.jpg);
+  background-image: url(../img/home/banner.jpg);
   background-position: center center;
   background-size: cover;
   min-height: 380px;
