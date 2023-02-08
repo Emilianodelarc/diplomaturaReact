@@ -1,0 +1,34 @@
+.cuadrados{
+    display: flex;
+}
+span{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    border: 2px solid black;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    color: white;
+    font-size: 32px;
+    text-align: center;
+}
+#red, #green, #blue{
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    color: white;
+}
+#red{
+    background-color: red;
+    
+}
+#blue{
+    background-color: blue;
+}
+#green{
+    background-color: green;
+}
