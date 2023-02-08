@@ -7,7 +7,6 @@ function cambio_fondo(color) {
     mensaje.innerText = `Ha selecionado el color traducido al ingles : ${color}`
 }
 
-
 cuadrado.forEach((span)=>{
     span.addEventListener('click', ()=>{
         cambio_fondo(span.id)
