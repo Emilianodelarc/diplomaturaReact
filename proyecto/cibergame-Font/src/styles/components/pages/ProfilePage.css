@@ -1,0 +1,136 @@
+/* PROFILE */
+.main-profile {
+    border-radius: 23px;
+    padding: 30px;
+    background-color: #1f2122;
+  }
+  .main-profile img{
+    border-radius: 23px;
+  }
+  .main-profile .main-info span {
+    font-size: 14px;
+    color: #fff;
+    background-color: #e75e8d;
+    padding: 8px 20px;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+  }
+  .main-profile .main-info h4 {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .main-profile .main-info .main-border-button {
+    margin-top: 25px;
+  }
+  .main-profile ul {
+    border-radius: 23px;
+    padding: 30px;
+    background-color: #27292a;
+  }
+  .main-profile ul li {
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #666;
+  }
+  .main-profile ul li span {
+    float: right;
+    font-weight: 500;
+    color: #ec6090;
+  }
+  .clips {
+    margin-top: 30px;
+    border-top: 2px solid #27292a;
+  }
+  .clips .heading-section {
+    margin-top: 30px;
+  }
+  .clips .item {
+    border-radius: 23px;
+    padding: 30px 15px;
+    background-color: #27292a;
+    margin-bottom: 30px;
+  }
+  .clips .item .thumb {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  .clips .item .thumb a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-23px, -23px);
+    width: 46px;
+    height: 46px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 46px;
+    color: #ec6090;
+  }
+  .clips .item h4 {
+    font-size: 15px;
+    display: inline-block;
+    color: #fff;
+  }
+  .clips .item span {
+    float: right;
+    color: #fff;
+    font-size: 14px;
+  }
+  .clips .item span i {
+    color: #ec6090;
+  }
+  .clips .main-button {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .gaming-library {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #1f2122;
+    border-radius: 23px;
+  }
+  .gaming-library .item {
+    border-bottom: 1px solid #27292a;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .gaming-library .item ul li {
+    margin-top: 15px;
+  }
+  .gaming-library .item ul li img {
+    margin-top: -30px;
+  }
+  .gaming-library .item ul li {
+    display: inline-block;
+    width: 17%;
+  }
+  .gaming-library .item ul li:first-child {
+    width: 110px;
+  }
+  .gaming-library .item ul li h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  .gaming-library .item ul li span {
+    color: #666;
+    font-size: 14px;
+  }
+  .gaming-library .item ul li:last-child {
+    width: 15%;
+    text-align: right;
+  }
+  .profile-library .last-item {
+    border-bottom: none;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }

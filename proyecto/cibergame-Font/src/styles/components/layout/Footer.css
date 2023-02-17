@@ -1,0 +1,29 @@
+.footer_contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dee2e6;
+    padding: 16px 0 16px 0;
+    margin: 24px 0 24px 0;
+}
+.footer_span{
+    display: flex;
+    align-items: center;
+}
+.lista_redes{
+    display: flex;
+    justify-content:flex-end;
+    list-style: none;
+    margin-right: 24px;
+    
+}
+.fa-twitter:hover{
+    color: #00acee;
+}
+.fa-instagram:hover{
+    color: #833AB4;
+}
+.fa-facebook-square:hover{
+    color: #4267B2;
+}
