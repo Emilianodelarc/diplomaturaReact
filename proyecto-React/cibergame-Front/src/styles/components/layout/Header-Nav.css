@@ -109,6 +109,9 @@ p {
   border-radius: 50%;
   margin-left: 5px;
 }
+.navbar-expand-lg .navbar-collapse {
+  flex-basis: none !important;
+}
 .page-content {
   margin-top: 110px;
   background-color: #27292a;

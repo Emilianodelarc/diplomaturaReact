@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import popular01 from '../img/home/popular-01.jpg';
 import popular02 from '../img/home/popular-02.jpg';
 import popular03 from '../img/home/popular-03.jpg';
@@ -25,13 +24,12 @@ const HomePage = () => {
                       <em>Games</em> Our Popular Games Here
                     </h4>
                     <div className="main-button">
-                      <Link to={'/games'}>Games Now</Link>
+                      <a href='/games'>Games Now</a>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-
             <section className="most-popular">
               <div className="row">
                 <div className="col-lg-12">
@@ -191,7 +189,7 @@ const HomePage = () => {
                     </div>
                     <div className="col-lg-12">
                       <div className="main-button">
-                        <Link to={'/games'}>Discover Popular Game</Link>
+                        <a href='/games'>Discover Popular Game</a>
                       </div>
                     </div>
                   </div>

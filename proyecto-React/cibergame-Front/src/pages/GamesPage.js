@@ -1,5 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useEffect,useState} from "react";
+import { useInfoContext } from "../utils/InfoContext";
+import ReactPaginate from "react-paginate";
+import loading from '../img/games/loading.gif';
 import featured01 from '../img/games/featured-01.jpg';
 import featured02 from '../img/games/featured-02.jpg';
 import featured03 from '../img/games/featured-03.jpg';
@@ -11,7 +13,31 @@ import service02 from '../img/games/service-02.jpg';
 import service03 from '../img/games/service-03.jpg';
 import '../styles/components/pages/GamesPage.css';
 
+
 const GamesPage = () => {
+  const { items } = useInfoContext();
+  console.log(items);
+  const [page, setPage] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [itemOffset, setItemOffset] = useState(0);
+    let itemsPerPage = 8;
+    
+    useEffect(() => {
+        const endOffset = itemOffset + itemsPerPage;
+        setPage(items.slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(items.length / itemsPerPage));
+    }, [itemOffset, itemsPerPage,items]);
+
+    const handlePageClick = (event) => {
+        const newOffset = (event.selected * itemsPerPage) % items.length;
+        setItemOffset(newOffset);
+      };
+  
+  
+
+
+
+
   return (
     <main className="container">
       <div className="row">
@@ -216,6 +242,57 @@ const GamesPage = () => {
                 </div>
               </div>
             </section>
+            <section className="most-popular">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="heading-section">
+                    <h4>
+                      <em>All</em> Games
+                    </h4>
+                  </div>
+                  <div className="row">
+                    {page.length === 0 ? <img src={loading} alt='loading'/> :
+                    page.map(game=>{
+                      return (
+                        <>
+                      <div key={game.id} className="col-lg-3 col-sm-6">
+                        <div className="item">
+                          <img src={game.thumbnail} alt={game.title} />
+                          <h4>
+                            {game.title}
+                            <br />
+                            <span>{game.genre}</span>
+                          </h4>
+                        </div>
+                    </div>
+                    </>)
+                    })}
+                    <div className="pagination">
+                      <ReactPaginate
+                          nextLabel="next"
+                          onPageChange={handlePageClick}
+                          pageRangeDisplayed={1}
+                          marginPagesDisplayed={1}
+                          pageCount={pageCount}
+                          previousLabel="prev"
+                          pageClassName="page-item"
+                          pageLinkClassName="page-link"
+                          previousClassName="page-item"
+                          previousLinkClassName="page-link"
+                          nextClassName="page-item"
+                          nextLinkClassName="page-link"
+                          breakLabel="..."
+                          breakClassName="page-item"
+                          breakLinkClassName="page-link"
+                          containerClassName="pagination"
+                          activeClassName="active"
+                          renderOnZeroPageCount={null}
+                      /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
             <section className="start-stream">
               <div className="col-lg-12">
@@ -284,7 +361,7 @@ const GamesPage = () => {
                   </div>
                   <div className="col-lg-12">
                     <div className="main-button">
-                      <Link to={'/streams'} >Go To Streams</Link>
+                      <a href='/streams' >Go To Streams</a>
                     </div>
                   </div>
                 </div>

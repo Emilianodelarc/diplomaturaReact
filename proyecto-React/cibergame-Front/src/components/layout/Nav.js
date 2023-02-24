@@ -31,27 +31,27 @@ const Nav = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to='/games' activestyle={{color: "#e75e8d"}} className="nav-link" >
+              <NavLink to='/games' className="nav-link" >
                 Games
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to='/details' activestyle={{color: "#e75e8d"}} className="nav-link" >
+              <NavLink to='/details' className="nav-link" >
                 Details
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to='/streams' activestyle={{color: "#e75e8d"}} className="nav-link" >
+              <NavLink to='/streams' className="nav-link" >
                 Streams
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to='/contacts' activestyle={{color: "#e75e8d"}} className="nav-link" >
+              <NavLink to='/contacts' className="nav-link" >
                 Contacts
               </NavLink>
             </li>
             <li>
-              <NavLink to='/profile' activestyle={{color: "#e75e8d"}}>
+              <NavLink to='/profile'>
                 Profile
                 <img src={avatar} alt="" />
               </NavLink>
