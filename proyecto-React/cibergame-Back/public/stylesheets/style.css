@@ -1,0 +1,217 @@
+/* Global styles */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,500&display=swap");
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(280,100,130, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+body {
+  background: #1f2122;
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  color: #ccc;
+  text-decoration: none !important;
+}
+h1{
+  color: #fff;
+}
+p {
+  font-size: 15px;
+  color: #fff;
+  line-height: 30px;
+  margin-bottom: 0px;
+}
+.header-area {
+  background-color: transparent;
+  position: absolute;
+  height: 70px;
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: all 0.5s ease 0s;
+}
+.header-area .main-nav {
+  min-height: 80px;
+  background: transparent;
+  display: flex;
+  padding: 15px 0px;
+  border-radius: 50px;
+  border: 1px solid #666;
+}
+.header-area .main-nav .logo-wrap {
+  border-right: 1px solid #27292a;
+  flex-basis: 25%;
+  margin-right: 5%;
+  transition: all 0.3s ease 0s;
+}
+
+.logo-wrap a {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+.logo-wrap a span {
+  color: #e75e8d;
+}
+.logo-wrap a:hover {
+  opacity: 0.5;
+}
+.header-area .main-nav .nav {
+  display: inline-flex;
+  flex-basis: 70%;
+  justify-content: flex-end;
+  vertical-align: middle;
+  text-align: right;
+  margin-top: 0px;
+  margin-right: 0px;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 999;
+}
+
+.header-area .main-nav .nav li {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+}
+.header-area .main-nav .nav li a {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #666;
+  transition: all 0.3s ease 0s;
+  border: transparent;
+  padding: 13px 10px;
+  border-radius: 18px;
+  letter-spacing: 0.3px;
+}
+.header-area .main-nav .nav li a.active {
+  color: #e75e8d !important;
+}
+
+.header-area .main-nav .nav a:hover,
+.header-area .main-nav .nav a.active:hover {
+  color: #fff !important;
+  background-color: #e75e8d !important;
+}
+.header-area .main-nav .nav li:last-child a img {
+  max-width: 30px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+.navbar-expand-lg .navbar-collapse {
+  flex-basis: none !important;
+}
+.page-content {
+  margin-top: 110px;
+  background-color: #27292a;
+  padding: 60px;
+  border-radius: 23px;
+}
+.main-button a {
+  font-size: 14px;
+  color: #fff;
+  background-color: #e75e8d;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.main-border-button a {
+  font-size: 14px;
+  color: #ec6090;
+  background-color: transparent;
+  border: 1px solid #ec6090;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.border-no-active a {
+  border-color: #666;
+  color: #666;
+}
+
+
+/* home admin */
+.main-banner {
+  background-image: url(../images/banner.jpg);
+  background-position: center center;
+  background-size: cover;
+  min-height: 380px;
+  border-radius: 23px;
+  padding: 80px 60px;
+}
+.main-banner h6 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.main-banner h4 {
+  font-size: 45px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+
+
+/* footer{
+  position: absolute;
+  bottom: 0;
+} */
+.footer_contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dee2e6;
+  padding: 16px 0 16px 0;
+  margin: 24px 0 24px 0;
+}
+.footer_span{
+  display: flex;
+  align-items: center;
+}
+.lista_redes{
+  display: flex;
+  justify-content:flex-end;
+  list-style: none;
+  margin-right: 24px;
+  
+}
+.fa-twitter:hover{
+  color: #00acee;
+}
+.fa-instagram:hover{
+  color: #833AB4;
+}
+.fa-facebook-square:hover{
+  color: #4267B2;
+}
+
+
