@@ -21,6 +21,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+require('dotenv').config()
+
+var pool = require('./models/bd');
+
+
+
 //session
 app.use(session({
   secret:'tugWYExiucOgRhVpzQeP',
@@ -29,8 +35,29 @@ app.use(session({
 }))
 
 
-// app.use('/', indexRouter);
-// app.use('/admin/login', loginRouter);
+
+app.use('/', indexRouter);
+app.use('/admin/login', loginRouter);
+
+// consulta de la Base de Datos
+pool.query('select * from empleados').then(function(resultados){
+  console.log(resultados)
+})
+
+var obj = {
+  nombre: "Emiliano",
+  apellido: "Del Arco",
+  trabajo: "AlumnoDeFlavia",
+  edad: 32,
+  salario:200000,
+  mail:"emiliano@ejemplo.com"
+}
+
+pool.query('insert into empleados set ?', [obj]).then(function (resultados){
+  console.log(resultados);
+})
+
+
 
 app.get('/', (req,res)=>{
   var conocido = Boolean(req.session.nombre);
