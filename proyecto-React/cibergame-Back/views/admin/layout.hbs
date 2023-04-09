@@ -30,7 +30,9 @@
                     <span>Ciber</span>Game
                   </a>
                 </div>
-
+                  {{#if usuario}}
+                    <a href="/admin/login/logout" class="logout-btn">Cerrar sesión</a>
+                    {{/if}}
                 <button
                   class="navbar-toggler"
                   type="button"
@@ -56,9 +58,9 @@
                 <div class="col-lg-7">
                   <div class="header-text">
                     {{{body}}}
-                    <h4>
+                    {{!-- <h4>
                       Estamos en desarrollo
-                    </h4>
+                    </h4> --}}
                   </div>
                 </div>
               </div>

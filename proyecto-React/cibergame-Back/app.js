@@ -3,13 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var session = require('express-session');
+require('dotenv').config()
+var app = express();
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/admin/login');
+var adminRouter = require('./routes/admin/novedades');
+const async = require('hbs/lib/async');
 
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,12 +23,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-require('dotenv').config()
-
-var pool = require('./models/bd');
-
-
-
 //session
 app.use(session({
   secret:'tugWYExiucOgRhVpzQeP',
@@ -34,54 +30,22 @@ app.use(session({
   saveUninitialized: true
 }))
 
+secured = async (req, res, next)=>{
+  try {
+    if(req.session.id_usuario){
+      next()
+    }else{
+      res.redirect('/admin/login')
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 
 app.use('/', indexRouter);
 app.use('/admin/login', loginRouter);
-
-// consulta de la Base de Datos
-pool.query('select * from empleados').then(function(resultados){
-  console.log(resultados)
-})
-
-var obj = {
-  nombre: "Emiliano",
-  apellido: "Del Arco",
-  trabajo: "AlumnoDeFlavia",
-  edad: 32,
-  salario:200000,
-  mail:"emiliano@ejemplo.com"
-}
-
-pool.query('insert into empleados set ?', [obj]).then(function (resultados){
-  console.log(resultados);
-})
-
-
-
-app.get('/', (req,res)=>{
-  var conocido = Boolean(req.session.nombre);
-
-  res.render('index',{
-    title: 'Sesiones en Expres.js',
-    conocido:conocido,
-    nombre:req.session.nombre
-  })
-})
-
-app.post('/ingresar', (req,res)=>{
-  if(req.body.nombre){
-    req.session.nombre = req.body.nombre
-  }
-  res.redirect('/')
-})
-
-app.get('/salir', (req,res)=>{
-  req.session.destroy();
-  res.redirect('/')
-})
-
-
+app.use('/admin/novedades', secured , adminRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
