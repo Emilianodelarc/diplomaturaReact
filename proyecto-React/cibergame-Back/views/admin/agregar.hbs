@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-content">
+      <section class="main-banner">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="header-text">
+              <div class="col-12 offset-3">
+                <h4>Agregar una nueva novedad</h4>
+                <form action="/admin/novedades/agregar" method="post">
+                  <div class="mb-3 row">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Titulo"
+                      name="titulo"
+                    />
+                  </div>
+                  <div class="mb-3 row">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Subtitulo"
+                      name="subtitulo"
+                    />
+                  </div>
+                  <div class="mb-3 row">
+                    <textarea
+                      name="cuerpo"
+                      class="form-control"
+                      placeholder="Cuerpo"
+                    ></textarea>
+                  </div>
+                    <div>
+                        <button type="submit" class="main-button">Guardar</button>
+                        <a href="/admin/novedades" class="btn main-button">
+                            </i>Volver
+                        </a>
+                    </div>
+                  
+                </form>
+                {{#if error}}
+                  <p>{{message}}</p>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

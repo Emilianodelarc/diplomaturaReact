@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-content">
+      <section class="main-banner">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="header-text">
+              <div class="col-12 offset-3">
+                <h4>Seguro que quieres eliminar esto?</h4>
+                <form class="eliminar-nov" action="/admin/novedades/eliminar/{{id}}" method="post">
+                  <div class="mb-3 row">
+                    <p>Titulo de la novedad:</p>
+                    <p class="dat">{{novedad.titulo}}</p>
+                  </div>
+                  <div class="mb-3 row">
+                    <p>Subtitulo de la novedad:</p>
+                    <p class="dat">{{novedad.subtitulo}}</p>
+                  </div>
+                  <div class="mb-3 row">
+                    <p>Contenido de la novedad:</p>
+                    <p class="dat">{{novedad.cuerpo}}</p>
+                  </div>
+                    <div>
+                        <button type="submit" class="main-button eliminar">Eliminar</button>
+                        <a href="/admin/novedades/" class="btn main-button">
+                            </i>Volver
+                        </a>
+                    </div>
+                  
+                </form>
+                {{#if error}}
+                  <p>{{message}}</p>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

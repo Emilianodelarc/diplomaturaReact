@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-content">
+      <section class="main-banner">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="header-text">
+              <form action="/admin/login/register" method="post">
+                <label for="username">ingrese su <b>Nombre de usuario</b>:</label>
+                <input type="text"  name="usuario" placeholder="Nuevo Usuario" required />
+
+                <label for="password">ingrese su <b>Contraseña</b>:</label>
+                <input type="password"  name="password" placeholder="Nueva Contraseña" required />
+                
+                <div>
+                    <button type="submit" class="btn main-button">Registrarse</button>
+                    <a href="/admin/login" class="btn main-button">
+                            </i>Volver
+                    </a>
+                </div>
+
+              </form>
+              {{#if error}}
+                <p>{{message}}</p>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

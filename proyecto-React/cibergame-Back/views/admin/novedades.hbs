@@ -1,2 +1,68 @@
-<h3>Hola {{usuario}}</h3>
-<h4>Bienvenido a Cibergame</h4>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-content">
+      <section class="main-banner">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="header-text">
+              <h3>Hola {{usuario}}</h3>
+              <h4>Bienvenido a Cibergame</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="most-popular">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="heading-section">
+              <h4>
+                <em>Lista de</em>
+                Novedades
+              </h4>
+              <div class="col-5 text-end">
+                <a href="/admin/novedades/agregar" class="btn main-button">
+                  <i class="fa fa-plus" aria-hidden="true"></i>Nuevo
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div className="col-lg-3 col-sm-6">
+                <div class="row">
+                    <div class="col">
+                        <table class="table">
+                            <thead>
+                                <tr class="table-dark">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Titulo</th>
+                                    <th scope="col">Detalle</th>
+                                    <th class="text-end">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbodv>
+                                {{#each novedades}}
+                                <tr>
+                                    <th scope="row">{{id}}</th>
+                                    <td>{{titulo}}</td>
+                                    <td>{{cuerpo}}</td>
+                                    <td class="text-end">
+                                        <a class="btn btn-secondary" href="/admin/novedades/editar/{{id}}">
+                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="btn btn-secondary" href="/admin/novedades/eliminar/{{id}}">
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
