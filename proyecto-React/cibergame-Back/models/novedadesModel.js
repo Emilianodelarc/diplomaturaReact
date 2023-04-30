@@ -20,10 +20,10 @@ async function insertNovedad(obj){
 
 async function updateNovedad(id, data) {
     try {
-        var query = 'UPDATE novedades SET titulo=?, subtitulo=?, cuerpo=? WHERE id=?'
-      const result = await pool.query(query,[data.titulo, data.subtitulo, data.cuerpo, id]
-      );
-      console.log(result);
+        var query = 'UPDATE novedades SET titulo=?, subtitulo=?, cuerpo=?, img_id=? WHERE id=?'
+
+      const result = await pool.query(query,[data.titulo, data.subtitulo, data.cuerpo,data.img_id, id]);
+      
       return result.affectedRows > 0;
     } catch (error) {
       console.log(error);

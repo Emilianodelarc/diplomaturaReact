@@ -310,6 +310,7 @@ label, input {
   margin: 10px 0;
   border-radius: 15px;
   padding-left: 10px;
+  width: 600px !important;
 }
 label{
   color: #fff;
@@ -363,3 +364,9 @@ button:hover {
 .mb-3.row{
   text-align: center;
 }
+
+textarea{
+  height: 300px;
+  width: 600px !important;
+}
+

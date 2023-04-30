@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
 import StreamsPage from "./pages/StreamsPage";
 import './styles/components/mobile/style-mobile.css'
+import NovedadesPage from "./pages/NovedadesPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<HomePage/>}/>
           <Route path="/games" element={<GamesPage/>}/>
           <Route path="/details" element={<DetailsPage/>}/>
+          <Route path="/news" element={<NovedadesPage/>}/>
           <Route path="/streams" element={<StreamsPage/>}/>
           <Route path="/contacts" element={<ContacsPage/>}/>
           <Route path="/profile" element={<ProfilePage/>}/>

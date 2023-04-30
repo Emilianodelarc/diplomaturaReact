@@ -7,13 +7,14 @@
             <div class="header-text">
               <div class="col-12 offset-3">
                 <h4>Modificar la novedad</h4>
-                <form action="/admin/novedades/editar/{{id}}" method="post">
+                <form action="/admin/novedades/editar/{{id}}" method="post" enctype="multipart/form-data">
                   <div class="mb-3 row">
                     <input
                       type="text"
                       class="form-control"
                       placeholder="Titulo"
                       name="titulo"
+                      value="{{novedad.titulo}}"
                     />
                   </div>
                   <div class="mb-3 row">
@@ -22,14 +23,31 @@
                       class="form-control"
                       placeholder="Subtitulo"
                       name="subtitulo"
+                      value="{{novedad.subtitulo}}"
                     />
+                  </div>
+                  <div class="mb-3 row">
+                    <input
+                      type="file"
+                      class="form-control"
+                      placeholder="Subtitulo"
+                      name="imagen"
+                      id="imagen"
+                    />
+                    <p>
+                      <label>
+                        <input type="checkbox" name="img_delete" id="img_delete" value="1">
+                        Eliminar imagen actual?
+                      </label>
+                      <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+                    </p>
                   </div>
                   <div class="mb-3 row">
                     <textarea
                       name="cuerpo"
                       class="form-control"
-                      placeholder="Cuerpo"
-                    ></textarea>
+                      placeholder="Cuerpo"                     
+                    >{{novedad.cuerpo}}</textarea>
                   </div>
                     <div>
                         <button type="submit" class="main-button">Guardar</button>

@@ -4,13 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
+var fileUpload = require('express-fileupload')
+var cors = require('cors')
+
 require('dotenv').config()
 var app = express();
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
-const async = require('hbs/lib/async');
+var apiRouter = require('./routes/api')
 
 
 // view engine setup
@@ -43,10 +46,15 @@ secured = async (req, res, next)=>{
 }
 
 
+app.use(fileUpload({
+  useTempFiles:true,
+  tempFileDir:'/tmp/'
+}))
+
 app.use('/', indexRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured , adminRouter)
-
+app.use('/api', cors(),apiRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
