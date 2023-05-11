@@ -182,3 +182,8 @@ button {
   outline: 0;
   border: 1px solid #97d848;
 }
+.mensajeForm{
+  color: #fff;
+  border: 2px solid greenyellow;
+  padding: 35px;
+}

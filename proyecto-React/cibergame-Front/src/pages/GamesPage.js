@@ -16,7 +16,6 @@ import '../styles/components/pages/GamesPage.css';
 
 const GamesPage = () => {
   const { items } = useInfoContext();
-  console.log(items);
   const [page, setPage] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);

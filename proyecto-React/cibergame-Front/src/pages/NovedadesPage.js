@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import loadGif from '../img/loading-bar.gif'
+import loadingif from '../img/games/loading.gif'
 import otherGame01 from "../img/details/other-game-01.jpg";
 import otherGame02 from "../img/details/other-game-02.jpg";
 import otherGame03 from "../img/details/other-game-03.jpg";
@@ -9,6 +9,7 @@ import otherGame06 from "../img/details/other-game-06.jpg";
 import axios from "axios";
 import NovedadItem from "../components/novedades/NovedadItem";
 import "../styles/components/pages/DetailPage.css";
+import "../styles/components/pages/NovedadesPage.css";
 
 
 
@@ -28,8 +29,6 @@ const NovedadesPage = () => {
           setLoading(false)  
         }, 3000);
         
-
-        console.log(novedades);
       }
 
       cargarNovedades()
@@ -45,7 +44,7 @@ const NovedadesPage = () => {
               <div className="col-lg-12">
               </div>
             </div>
-            { loading ? <img src={loadGif}/> :
+            { loading ? <img src={loadingif}/> :
 
                novedades.map(item => <NovedadItem key={item.id} 
                 title={item.titulo} subtitle={item.subtitulo} 
